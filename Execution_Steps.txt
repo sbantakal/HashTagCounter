@@ -1,0 +1,85 @@
+1. Run ls -lrt in the project submission directory
+
+		sbantakal@ssrb-vpn2-12-77 HashTagCounter % ls -lrt
+		total 104
+		-rw-rw-r--@ 1 sbantakal  staff  13967 Apr  6 16:12 input_file.txt					<= sample input file
+		-rw-r--r--@ 1 sbantakal  staff   9399 Apr  6 17:01 FiboHeap.java
+		-rw-r--r--@ 1 sbantakal  staff    175 Apr  6 17:01 IncorrectArgumentsException.java
+		-rw-r--r--@ 1 sbantakal  staff    896 Apr  6 17:02 Node.java
+		-rw-r--r--@ 1 sbantakal  staff   5118 Apr  6 17:02 HashTagCounter.java				<= file with main function
+		-rw-r--r--@ 1 sbantakal  staff    462 Apr  6 17:06 Makefile
+
+2. Run make
+
+	sbantakal@ssrb-vpn2-12-77 HashTagCounter % ls -lrt
+	total 104
+	-rw-rw-r--@ 1 sbantakal  staff  13967 Apr  6 16:12 input_file.txt
+	-rw-r--r--@ 1 sbantakal  staff   9399 Apr  6 17:01 FiboHeap.java
+	-rw-r--r--@ 1 sbantakal  staff    175 Apr  6 17:01 IncorrectArgumentsException.java
+	-rw-r--r--@ 1 sbantakal  staff    896 Apr  6 17:02 Node.java
+	-rw-r--r--@ 1 sbantakal  staff   5118 Apr  6 17:02 HashTagCounter.java
+	-rw-r--r--@ 1 sbantakal  staff    462 Apr  6 17:06 Makefile
+	drwxr-xr-x  6 sbantakal  staff    192 Apr  6 17:13 hashtagcounter					  <= new directory with compiled java class files will be created
+	
+	
+
+command to run the project(from project submission directory):
+--------------------------------------------------------------
+java hashtagcounter.HashTagCounter <input_file> <output_file>
+
+
+3. Run all test cases
+======================
+	
+	a. no input file name
+	----------------------
+	
+	result:
+	-------
+	sbantakal@ssrb-vpn2-12-77 HashTagCounter % java hashtagcounter.HashTagCounter 
+	Incorrect Argument Exception occurred => *** No Arguments Passed *** 
+	I/P Formats :-
+		1].	java hashtagcounter.HashTagCounter <input_file> <output_file> 	(writes the program output into the output file specified)
+		2].	java hashtagcounter.HashTagCounter <input_file>               	(prints the output on the screen)
+	
+	sbantakal@ssrb-vpn2-12-77 HashTagCounter %
+	
+	
+	b. no output file specified
+	---------------------------
+	
+	result:
+	--------
+	sbantakal@ssrb-vpn2-12-77 HashTagCounter % java hashtagcounter.HashTagCounter input_file.txt
+	cholelithotomy,chloramine,chlorococcum,chivarras,chon
+	chloroprene,chivarras,chloramine,chloral,chlorococcum,cholelithotomy,chlorothiazide
+	chloramine,chirurgy,chivarras,chloroprene,chisel,chocolate,chloral,chloroquine,chokidar
+	choke,chokidar
+	choke,chishona,chloroquine,chloramphenicol,chloroprene,chokidar,chirurgy,chlorothiazide,chokra,choleraic,chloramine,chlorophyll,chon,chivarras,chirurgery,choir,cholelithotomy,cholecystectomy
+	chlorococcum,chishona,choke,chirurgery,cholelithotomy,chitterings,chokra,chloroprene,chisel,choleraic,cholecystectomy,chloramphenicol,chirurgy,chloroquine,chivarras
+	chishona,cholelithotomy,chlorococcum,choke,choleraic,chloramphenicol,chivarras
+	choke,chlorura,chisel,cholelithotomy,chishona,choleraic,chlorophyll,chivarras
+	choke,chisel,chlorura
+	chlorura,cholecystectomy,chlorophyll,choleraic,cholelithotomy,choke,chisel
+	chlorophyll,chlorura,choleraic,cholelithotomy,cholecystectomy,choke,chlorella,chlorococcum,chisel
+	sbantakal@ssrb-vpn2-12-77 HashTagCounter % 
+	
+	
+	c. output file specified
+	-------------------------
+	
+	result:
+	-------
+	sbantakal@ssrb-vpn2-12-77 HashTagCounter % java hashtagcounter.HashTagCounter input_file.txt output_file.txt
+	sbantakal@ssrb-vpn2-12-77 HashTagCounter % ls -lrt
+	total 104
+	-rw-rw-r--@ 1 sbantakal  staff  13967 Apr  6 16:12 input_file.txt
+	-rw-r--r--@ 1 sbantakal  staff    175 Apr  6 17:01 IncorrectArgumentsException.java
+	-rw-r--r--@ 1 sbantakal  staff    896 Apr  6 17:02 Node.java
+	-rw-r--r--@ 1 sbantakal  staff    462 Apr  6 17:06 Makefile
+	drwxr-xr-x  6 sbantakal  staff    192 Apr  6 17:13 hashtagcounter
+	-rw-r--r--@ 1 sbantakal  staff   5140 Apr  6 17:17 HashTagCounter.java
+	-rw-r--r--@ 1 sbantakal  staff   9424 Apr  6 17:21 FiboHeap.java
+	-rw-r--r--  1 sbantakal  staff    949 Apr  6 17:22 output_file.txt 					  <== new file with output should be created
+	sbantakal@ssrb-vpn2-12-77 HashTagCounter % 
+	
